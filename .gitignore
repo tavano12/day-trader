@@ -1,0 +1,23 @@
+# Environment variables and secrets
+.env
+.env.*
+*.env
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Local trader runtime data and state
+trader/state/
+trader/portfolio.json
+trader/orders.json
+trader/plan.json
+trader/prices.json
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp

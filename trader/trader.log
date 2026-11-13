@@ -1,0 +1,15 @@
+2026-11-13 03:30:45,779 [INFO] ============================================================
+2026-11-13 03:30:45,779 [INFO] UFFICIO AGENTI FINANZIARI - MOTORE AUTONOMO ATTIVO
+2026-11-13 03:30:45,780 [INFO] Modalita': ESCLUSIVAMENTE PAPER TRADING
+2026-11-13 03:30:45,780 [INFO] Log persistente: C:\Users\lanat\.gemini\antigravity\scratch\day-trader-skill\trader\trader.log
+2026-11-13 03:30:45,780 [INFO] ============================================================
+2026-11-13 03:30:46,263 [INFO] Mercato chiuso (Timestamp: 2026-11-12T21:30:47.441279089-05:00). Prossima apertura: 2026-11-13T09:30:00-05:00. Agenti in attesa...
+2026-11-13 03:31:14,399 [INFO] ============================================================
+2026-11-13 03:31:14,399 [INFO] UFFICIO AGENTI FINANZIARI - MOTORE AUTONOMO ATTIVO
+2026-11-13 03:31:14,402 [INFO] Modalita': ESCLUSIVAMENTE PAPER TRADING
+2026-11-13 03:31:14,402 [INFO] Log persistente: C:\Users\lanat\.gemini\antigravity\scratch\day-trader-skill\trader\trader.log
+2026-11-13 03:31:14,402 [INFO] ============================================================
+2026-11-13 03:31:14,768 [INFO] Mercato chiuso (Timestamp: 2026-11-12T21:31:15.981917982-05:00). Prossima apertura: 2026-11-13T09:30:00-05:00. Agenti in attesa...
+2026-11-13 03:34:15,084 [INFO] Esecuzione singola (modalita' Cloud / Cron)...
+2026-11-13 03:34:15,477 [INFO] Controllo Mercato: CHIUSO (Timestamp: 2026-11-12T21:34:16.694986391-05:00)
+2026-11-13 03:34:15,477 [INFO] La sessione di negoziazione non e' attiva. Nessun ordine inviato.

@@ -1,0 +1,35 @@
+name: Autonomous Paper Trading Desk (Cloud 24/7)
+
+on:
+  schedule:
+    # Lunedì-Venerdì alle 14:45 UTC (09:45 New York / 15:45 CET) - Apertura e Ingresso
+    - cron: '45 14 * * 1-5'
+    # Lunedì-Venerdì alle 20:55 UTC (15:55 New York / 21:55 CET) - Chiusura Flat by Close
+    - cron: '55 20 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  trading-cycle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Scarica Codice Desk
+        uses: actions/checkout@v4
+
+      - name: Inizializza Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Esecuzione Ciclo di Trading (Paper Trading)
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          APCA_API_KEY_ID: ${{ secrets.ALPACA_API_KEY }}
+          APCA_API_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          APCA_API_BASE_URL: https://paper-api.alpaca.markets
+          ALPACA_PAPER_TRADE: "true"
+          SEC_USER_AGENT: "ResearchBot lanatamauro01@gmail.com"
+        run: |
+          python trader/autonomous_engine.py --once
