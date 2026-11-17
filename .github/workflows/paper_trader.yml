@@ -1,15 +1,13 @@
-name: Autonomous Paper Trading Desk (Cloud 24/7)
+name: Autonomous AI Portfolio Manager (Cloud 24/7)
 
 on:
   schedule:
-    # Lunedì-Venerdì alle 14:45 UTC (09:45 New York / 15:45 CET) - Apertura e Ingresso
-    - cron: '45 14 * * 1-5'
-    # Lunedì-Venerdì alle 20:55 UTC (15:55 New York / 21:55 CET) - Chiusura Flat by Close
-    - cron: '55 20 * * 1-5'
+    # Esegue ogni 2 ore dal Lunedì al Venerdì
+    - cron: '0 */2 * * 1-5'
   workflow_dispatch:
 
 jobs:
-  trading-cycle:
+  ai-portfolio-cycle:
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -22,7 +20,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Esecuzione Ciclo di Trading (Paper Trading)
+      - name: Esecuzione Ciclo AI Portfolio Manager (Audit, Ribilanciamento, Opportunita')
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
@@ -32,4 +30,4 @@ jobs:
           ALPACA_PAPER_TRADE: "true"
           SEC_USER_AGENT: "ResearchBot lanatamauro01@gmail.com"
         run: |
-          python trader/autonomous_engine.py --once
+          python trader/ai_portfolio_manager.py --once
